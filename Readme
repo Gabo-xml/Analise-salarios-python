@@ -1,2 +1,46 @@
-Dashboard em Streamlit para explorar salários por filtros (ano, senioridade, contrato, tamanho da empresa), com KPIs e visuais (barras, histograma, pizza e mapa).  
-**Como rodar:** `pip install -r requirements.txt` e `streamlit run App.py`.
+# Dashboard de Salários na Área de Dados (Streamlit)
+
+Exploração visual e interativa de salários na área de dados. A aplicação oferece filtros por **ano**, **senioridade**, **tipo de contrato** e **tamanho da empresa**, além de KPIs e gráficos para investigar distribuição salarial, cargos de maior média e padrões por país.
+
+## Destaques
+- **Filtros laterais**: ano, senioridade, contrato e tamanho da empresa  
+- **KPIs**: salário médio, salário máximo, total de registros e cargo mais frequente  
+- **Gráficos**:
+  - Top 10 cargos por **salário médio** (barras horizontais)
+  - **Distribuição** de salários (histograma)
+  - **Proporção** de tipos de trabalho (remoto/híbrido/presencial)
+  - **Mapa** de salário médio para *Data Scientist* por país (códigos ISO3)
+- **Dados** carregados via CSV remoto (sem necessidade de baixar localmente)
+
+## Como executar
+1. Crie e ative um ambiente virtual (opcional, mas recomendado).
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+3. Rode a aplicação:
+    ```
+    streamlit run App.py
+Alternativa: se você usar um inicializador como run_streamlit.py, basta python run_streamlit.py.
+
+## Uso 
+Abra o app e selecione os filtros na barra lateral.
+
+Veja os KPIs no topo e navegue pelos gráficos.
+
+A tabela final (“Dados Detalhados”) reflete exatamente o subset filtrado.
+
+## Notas de privacidade
+
+O app lê um CSV público para demonstração. Para dados internos/sensíveis, troque a fonte de dados por um arquivo local e **não** versione esse arquivo.
+
+## Personalização
+
+Troque o arquivo de dados pela sua base real.
+
+Ajuste cores, títulos e rótulos no Plotly.
+
+Adicione @st.cache_data no carregamento para agilizar reexecuções.
+
+## Licença
+
+Projeto educacional/demonstrativo oferecido por um programa de imersão da Alura. Adapte e reutilize livremente com créditos.
