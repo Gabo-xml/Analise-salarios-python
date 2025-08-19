@@ -1,0 +1,2 @@
+Dashboard em Streamlit para explorar salários por filtros (ano, senioridade, contrato, tamanho da empresa), com KPIs e visuais (barras, histograma, pizza e mapa).  
+**Como rodar:** `pip install -r requirements.txt` e `streamlit run App.py`.
